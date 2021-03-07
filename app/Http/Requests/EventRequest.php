@@ -44,8 +44,11 @@ class EventRequest extends FormRequest
             "has_many_event_details" => "array|min:1",
             "a_custom_error" => "required",
         ];
-        if(!$this->validateDates()) $rules['a_custom_error'] = "required"; 
-            else unset($rules['a_custom_error']);
+        if(!$this->validateDates()) {
+            $rules['a_custom_error'] = "required";
+        } else {
+            unset($rules['a_custom_error']);
+        } 
         return $rules;
     }
 
