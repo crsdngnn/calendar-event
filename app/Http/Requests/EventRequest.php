@@ -59,8 +59,8 @@ class EventRequest extends FormRequest
             $days = collect($this->request->get('has_many_event_details'))->map(function ($d) {
                 return $d['name'];
             })->toArray();
-            $checkIfExistDays = collect($period)->map(function ($s) use ($days) {
-                return in_array($s->format('D'), $days) ? true : false;
+            $checkIfExistDays = collect($period)->map(function ($date) use ($days) {
+                return in_array($date->format('D'), $days) ? true : false;
             })->toArray();
             return in_array('true', $checkIfExistDays);
         }
