@@ -17,12 +17,11 @@ php artisan db:seed --class=DaySeeder
 
 ```
 
-## Run
-
-For Vuejs
+## Run in Vuejs
 ```bash
 npm run watch
-
-for Laravel
+```
+## Run in Laravel
 ```bash
 php artisan serve
+```
