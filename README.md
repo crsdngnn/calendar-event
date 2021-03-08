@@ -14,3 +14,13 @@ npm install
 php artisan migrate
 
 php artisan db:seed --class=DaySeeder
+
+## Run
+
+For Vuejs
+```bash
+npm run watch
+
+for Laravel
+```bash
+php artisan serve
